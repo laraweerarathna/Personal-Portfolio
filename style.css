@@ -1,0 +1,71 @@
+:root {
+    --border-radius: 15px;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --stream-color: #007bff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --gradient-start: #6dd5ed;
+    --gradient-end: #2193b0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+.profile-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-image-container {
+    margin-bottom: 1.5rem;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--stream-color);
+}
+
+.profile-header {
+    margin-bottom: 0.5rem;
+}
+
+.profile-name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.profile-stream {
+    font-size: 1rem;
+    color: var(--stream-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.profile-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+}
